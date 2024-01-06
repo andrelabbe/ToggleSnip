@@ -18,14 +18,14 @@ namespace ToggleSnip
             Process snippingTool = new Process();
             snippingTool.StartInfo.FileName = @"C:\Program Files\WindowsApps\Microsoft.ScreenSketch_11.2310.54.0_x64__8wekyb3d8bbwe\SnippingTool\SnippingTool.exe";
             snippingTool.Start();
-
+            Thread.Sleep(400);
             // Wait for the process to be ready
             snippingTool.WaitForInputIdle();
 
             // Start of the eky stroke sequence
 
             Thread.Sleep(400);
-            SendKeys.SendWait("{TAB}");
+ //           SendKeys.SendWait("{TAB}");
             Thread.Sleep(400);
             SendKeys.SendWait("{TAB}");
             Thread.Sleep(400);
@@ -45,6 +45,12 @@ namespace ToggleSnip
             Thread.Sleep(400);
             SendKeys.SendWait(" ");
             Thread.Sleep(400);
+            //SendKeys.SendWait("{TAB}");
+            //Thread.Sleep(400);
+            //SendKeys.SendWait("{TAB}");
+            //Thread.Sleep(400);
+            //SendKeys.SendWait("{TAB}");
+            //Thread.Sleep(400);
             SendKeys.SendWait("% ");
             Thread.Sleep(400);
             SendKeys.SendWait("{UP}");
